@@ -6,7 +6,7 @@ In real projects, I use Express :)
 
 ## For beginners who might want to try this:
 
-Clone this directory: `git clone https://github.com/geocarlos/basic-node-site.git`.
+Clone this repository: `git clone https://github.com/geocarlos/basic-node-site.git`.
 
 CD into the directory: `cd basic-node-site`.
 
