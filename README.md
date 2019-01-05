@@ -12,6 +12,6 @@ CD into the directory: `cd basic-node-site`.
 
 Run server with Node: `node server`.
 
-Point your browser to "http://localhost:3001" to view the simple site.
+Point your browser to http://localhost:3001 to view the simple site.
 
 Try to figure it out and make improvements :)
