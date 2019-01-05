@@ -14,5 +14,5 @@ const routes = {
 }
 
 module.exports = route = (url)=>{
-    return setView(routes[url]);
+    return getView(routes[url]);
 };

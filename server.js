@@ -12,9 +12,11 @@ const port = 3001;
 
 // Use http module to create a web server and listen on the port defined in 'port'
 http.createServer((req, res)=>{
+    // Log requested URL to the console
+    console.log(req.url)
     // The route function will look for a key corresponding to the provided URL so 
     // to get the value assigned to it. If the key does not exist, there will be an
-    // error, which is handle in the catch part, where we pass '404' to route
+    // error, which is handled in the catch part, where we pass '404' to route
     // and get the template for the 404 page.
     try{
         res.writeHead(200, {'Content-Type': 'text/html'});
