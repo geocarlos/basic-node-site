@@ -36,6 +36,6 @@ http.createServer((req, res)=>{
 }).listen(
     port, () =>{
         console.log("Running on port " + port);
-        child_process.exec('google-chrome http://localhost:' + port);
+        child_process.exec('google-chrome --app=http://localhost:' + port);
     }
 )
