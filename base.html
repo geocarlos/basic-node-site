@@ -25,5 +25,11 @@
     {% content %}
     <a href="/">Home</a>
     <a href="/about">About</a>
+    <script>
+        window.onunload = () => {
+            console.log('hey');
+            fetch("http://localhost:3001?closed");
+        }
+    </script>
 </body>
 </html>

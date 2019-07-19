@@ -22,20 +22,24 @@ http.createServer((req, res)=>{
     // Parse url
     const parsedUrl = url.parse(req.url);
 
+    if(parsedUrl.query === "closed"){
+        process.exit(0);
+    }
+
     // The route function will look for a key corresponding to the provided URL so 
     // to get the value assigned to it. If the key does not exist, there will be an
     // error, which is handled in the catch part, where we pass '404' to route
     // and get the template for the 404 page.
     try{
         res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end(route(parsedUrl.pathname))
+        res.end(route(parsedUrl.pathname));
     } catch(e){
         res.writeHead(404, {'Content-Type': 'text/html'});
-        res.end(route('404'))
+        res.end(route('404'));
     }
 }).listen(
     port, () =>{
         console.log("Running on port " + port);
-        child_process.exec('google-chrome --app=http://localhost:' + port);
+        const p = child_process.exec('google-chrome --app=http://localhost:' + port);
     }
 )
